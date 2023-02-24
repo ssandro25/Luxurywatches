@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Neon&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+ul li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    max-width: 1320px;
+    margin: 0 auto;
+}
+/* Header styles*/
+.header .header__head_bg {
+    background-color: #000;
+    color: #fff;
+    padding: 16px 0;
+}
+.header .header__head {
+   display: flex;
+    justify-content: space-between;
+}
+
+.header .header__head .header__items {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+
+.header__items .currency,
+.header__items .languages {
+    position: relative;
+    cursor: pointer;
+}
+
+.header__items .currency__chose,
+.header__items .lang__chose{
+    position: absolute;
+    top: 20px;
+    left: 30px;
+    background-color: #000;
+    color: #fff;
+    text-transform: uppercase;
+    width: 100px;
+    transition: .3s;
+    opacity: 0;
+}
+
+.header__items .lang__chose {
+    left: 30px !important;
+}
+
+.header__head .header__items .currency:hover .currency__chose,
+.header__head .header__items .languages:hover .lang__chose {
+    opacity: 1;
+}
+
+.header__head .header__items .currency:hover .fa-caret-down,
+.header__head .header__items .languages:hover .fa-caret-down {
+    transform: rotate(180deg);
+    color: #77b5e3;
+}
+.header__head .header__items .currency__chose ul li,
+.header__head .header__items .lang__chose ul li {
+    padding: 12px 8px;
+    cursor: pointer;
+    border-bottom: 1px solid aliceblue;
+}
+
+.header__head .basket .empty__cart {
+    font-size: 12px;
+    opacity: .7;
+}
+
+.header .header__title {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 16px 0;
+    border-bottom: 2px solid #eeee;
+}
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.header .container .navigation {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+}
+
+.navigation .nav__list {
+    display: flex;
+    gap: 24px;
+    color: #000000;
+    position: relative;
+}
+.navigation .nav__list .nav__item .nav__link {
+    color: #000000;
+    transition: .3s;
+}
+.navigation .nav__list .nav__item .nav__link:hover {
+    color: #77b5e3;
+}
+.navigation .nav__list .nav__item:hover  .nav__pre__list{
+    opacity: 1;
+}
+.navigation .nav__list .nav__pre__list {
+    display: flex;
+    position: absolute;
+    background-color: #fff;
+    top: 30px;
+    padding: 24px;
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%);
+    transition: .3s;
+    opacity: 0;
+}
+.navigation .nav__list .nav__pre__list ul {
+    margin-right: 100px;
+    white-space: nowrap;
+}
+.navigation .nav__list .nav__pre__list ul li strong{
+    color: #77b5e3;
+}
+.navigation .nav__list .nav__pre__list ul li{
+    margin-top: 12px;
+}
+.navigation .nav__list .nav__pre__list ul li a{
+    color: grey;
+    font-size: 14px;
+}
+.header .search {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8px;
+    border: 1px solid #eee;
+    height: 40px;
+    width: 250px;
+}
+.header .search .search__input {
+    border: unset !important;
+}
+
+.header .search .search__input:focus-visible {
+    background: unset;
+    border: unset;
+    outline: unset;
+}
+
+/* Main styles */
+.main .slider .intro__pic {
+    max-width: 100%;
+}
+.main .ads  {
+    margin-top: 48px;
+    display: flex;
+    gap: 48px;
+}
+.main .ads .watch__add {
+    width: 33.3%;
+    height: 300px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    -webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+}
+
+.main .ads .watch__add-1 {
+    background-image: url("images/ads-pic-1.jpg");
+
+}
+.main .ads .watch__add-2 {
+    background-image: url("images/ads-pic-2.jpg");
+}
+
+.main .ads .watch__add-3 {
+    background-image: url("images/ads-pic-3.jpg");
+}
+
+.main .sales {
+    margin-top: 48px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.main .sales > * {
+    padding: 16px;
+}
+
+.sales .sales__item {
+    width: 25%;
+}
+.sales .sales__item:nth-child(4n+1) {
+    padding-left: 0;
+}
+.sales .sales__item:nth-child(4n+4) {
+    padding-right: 0;
+}
+.sales .sales__item .sales__item__content {
+    border: 1px solid #eee;
+    transition: .3s;
+    padding: 24px;
+    position: relative;
+}
+.sales .sales__item .sales__item__content .item__badge {
+    position: absolute;
+    background-color: #77b5e3;
+    top: 40px;
+    left: 0;
+    color: #fff;
+    width: 80px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .3s;
+    opacity: 0;
+}
+.sales .sales__item .sales__item__content:hover {
+    border-color: #77b5e3;
+    color: #77b5e3;
+}
+.sales .sales__item .sales__item__content:hover .item__badge{
+    opacity: 1;
+}
+
+.sales .sales__item .sales__item__content .item-pic {
+    max-width: 100%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    text-align: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+.sales .sales__item .item__name {
+    display: block;
+    font-weight: 900;
+    text-transform: uppercase;
+    font-size: 18px;
+    margin-top: 24px;
+}
+.sales .sales__item .explore_now {
+    display: block;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-top: 8px;
+    color: lightgrey;
+}
+.sales .sales__item .shop {
+   margin-top: 16px;
+    font-weight: 900;
+}
+.footer {
+    margin-top: 48px;
+}
+.footer .information {
+    display: flex;
+    font-family: 'Tilt Neon', cursive;
+    border-bottom: 2px solid #eeee;
+    padding-bottom: 48px;
+}
+
+.information .info-list {
+    width: 25%;
+}
+
+.information .info-list strong {
+    font-size: 24px;
+    font-weight: 900;
+    color: #000;
+    margin-bottom: 18px;
+    display: block;
+
+}
+.information .info-list li {
+    margin-top: 12px;
+}
+.information .info-list li a ,
+.information .info-list li{
+    color: grey;
+    font-size: 18px;
+}
+
+.information .info-list li a .fa-brands{
+    color: #000;
+    margin-right: 8px;
+}
+
+.footer .subscribe {
+    padding: 48px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.send__email {
+    display: flex;
+    gap: 12px;
+}
+
+.input, .subscribe_btn {
+    background: unset;
+    border: 1px solid #000;
+    padding: 8px;
+    outline: unset;
+}
+.subscribe_btn {
+    cursor: pointer;
+    transition: .3s;
+}
+.subscribe_btn:hover {
+    background-color: #000;
+    color: #fff;
+}
